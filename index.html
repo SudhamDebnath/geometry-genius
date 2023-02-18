@@ -75,10 +75,10 @@
 
             <div class="mx-auto pb-4">
               <input type="text" id="first-input" placeholder="b" 
-              class="input input-bordered input-sm w-24 max-w-xs" /> cm
+              class="input input-sm w-24 bg-gray-100 max-w-xs" /> cm
 
               <input type="text" placeholder="h" id="second-input"
-                class="input input-bordered input-sm w-24 max-w-xs" /> cm
+                class="input input-sm bg-gray-100 w-24 max-w-xs" /> cm
             </div>
 
             <div class="card-actions justify-end">
@@ -87,9 +87,29 @@
           </div>
         </div>
         <!-- second card  -->
+        <div class="card card-compact w-80 bg-base-100 rounded shadow py-6">
+          <figure>
+            <img class="w-48 h-40 pt-5" src="./images/rectangle.png" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="font-bold text-2xl text-center" id="last-title">Rectangle</h2>
+            <p class="text-center"> Area (A) = w x i </p>
 
+            <div class="mx-auto pb-4">
+              <input type="text" id="first-input" placeholder="w" 
+              class="input input-sm w-24 bg-gray-100 max-w-xs" /> cm
+
+              <input type="text" placeholder="I" id="second-input"
+                class="input input-sm bg-gray-100 w-24 max-w-xs" /> cm
+            </div>
+
+            <div class="card-actions justify-end">
+              <button class="btn btn-wide bg-sky-500 border-0 mx-auto normal-case" id="last-card">Calculate</button>
+            </div>
+          </div>
+        </div>
         <!-- third card  -->
-
+        
         <!-- fourth card  -->
 
         <!-- fifth card  -->
@@ -102,7 +122,7 @@
       <!-- Area Calculation Section  -->
 
       <div class="cart-details w-full md:w-[40%] lg:w-[40%] mx-auto">
-        <h1 class="text-3xl text-center font-bold underline mt-5">
+        <h1 class="text-2xl text-center font-semibold underline mt-5">
           Area Calculation</h1>
         <div class="overflow-x-auto">
           <table class="table w-full">
@@ -115,7 +135,12 @@
               </tr>
             </tbody>
             <tbody id="table-data">
-             
+              <!-- <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Area</th>
+                <th>Covert to m<sup>2</sup> </th>
+              </tr> -->
             </tbody>
           </table>
         </div>
