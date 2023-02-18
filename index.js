@@ -1,12 +1,17 @@
+// Mouse hover random background color in cards
+const cards = document.querySelectorAll('.cards-hover');
 
-function redirect() {
-    window.location.href = 'blog.html';
-}
+cards.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    card.style.backgroundColor = `#${randomColor}`;
+  });
+});
 
 
 let serial = 0;
 
-// For First Card
+// For triangle Card
 document.getElementById('triangle-calculate-btn').addEventListener('click', function () {
     serial += 1;
     const triangleTitle = document.getElementById('triangle-title').innerText;
@@ -25,12 +30,12 @@ document.getElementById('triangle-calculate-btn').addEventListener('click', func
 
     //  Area Calculation
     const triangleArea = 0.5 * parseFloat(triangleBase) * parseFloat(triangleHeight);
-
-    displayData(triangleTitle, triangleArea);
+    const triangleAreaFixed = triangleArea.toFixed(2);
+    displayData(triangleTitle, triangleAreaFixed);
 
 })
 
-// For Second Card
+// For rectangle Card
 document.getElementById('rectangle-calculate-btn').addEventListener('click', function () {
     serial += 1;
     const rectangleTitle = document.getElementById('rectangle-title').innerText;
@@ -47,12 +52,12 @@ document.getElementById('rectangle-calculate-btn').addEventListener('click', fun
     }
 
     const rectangleArea = parseFloat(rectangleWidth) * parseFloat(rectangleLength);
-
-    displayData(rectangleTitle, rectangleArea);
+    const rectangleAreaFixed = rectangleArea.toFixed(2);
+    displayData(rectangleTitle, rectangleAreaFixed);
 
 })
 
-// For Third Card
+// For parallelogram Card
 document.getElementById('parallelogram-calculate-btn').addEventListener('click', function () {
     serial += 1;
     const parallelogramTitle = document.getElementById('parallelogram-title').innerText;
@@ -69,12 +74,12 @@ document.getElementById('parallelogram-calculate-btn').addEventListener('click',
     }
 
     const parallelogramArea = parseFloat(parallelogramBase) * parseFloat(parallelogramHeight);
-
-    displayData(parallelogramTitle, parallelogramArea);
+    const parallelogramAreaFixed = parallelogramArea.toFixed(2);
+    displayData(parallelogramTitle, parallelogramAreaFixed);
 
 })
 
-// For Fourth Card
+// For rhombus Card
 document.getElementById('rhombus-calculate-btn').addEventListener('click', function () {
     serial += 1;
     const rhombusTitle = document.getElementById('rhombus-title').innerText;
@@ -91,12 +96,12 @@ document.getElementById('rhombus-calculate-btn').addEventListener('click', funct
     }
 
     const rhombusArea = 0.5 * parseFloat(rhombusDiagonal1) * parseFloat(rhombusDiagonal2);
-
-    displayData(rhombusTitle, rhombusArea);
+    const rhombusAreaFixed = rhombusArea.toFixed(2);
+    displayData(rhombusTitle, rhombusAreaFixed);
 
 })
 
-// For Fifth Card
+// For pentagon Card
 document.getElementById('pentagon-calculate-btn').addEventListener('click', function () {
     serial += 1;
     const pentagonTitle = document.getElementById('pentagon-title').innerText;
@@ -113,12 +118,12 @@ document.getElementById('pentagon-calculate-btn').addEventListener('click', func
     }
 
     const pentagonArea = 0.5 * parseFloat(pentagonPerimeter) * parseFloat(pentagonBase);
-
-    displayData(pentagonTitle, pentagonArea);
+    const pentagonAreaFixed = pentagonArea.toFixed(2);
+    displayData(pentagonTitle, pentagonAreaFixed);
 
 })
 
-// For sixth Card
+// For ellipse Card
 document.getElementById('ellipse-calculate-btn').addEventListener('click', function () {
     serial += 1;
     const ellipseTitle = document.getElementById('ellipse-title').innerText;
@@ -135,8 +140,8 @@ document.getElementById('ellipse-calculate-btn').addEventListener('click', funct
     }
 
     const ellipseArea = 3.1416 * parseFloat(ellipseAxisA) * parseFloat(ellipseAxisB);
-
-    displayData(ellipseTitle, ellipseArea);
+    const ellipseAreaFixed = ellipseArea.toFixed(2);
+    displayData(ellipseTitle, ellipseAreaFixed);
 
 })
 
